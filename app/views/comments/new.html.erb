@@ -1,0 +1,17 @@
+<h1>New Comment</h1>
+
+<%= @comment.errors.full_messages.join(', ') %>
+
+<%= form_for @comment, :url => post_comments_path do |c| %>
+  <div>
+    <%= c.label :title %>
+    <%= c.text_field :title %>
+  </div>
+
+  <div>
+    <%= c.label :description %>
+    <%= c.text_field :description %>
+  </div>
+
+  <%= c.submit %>
+<% end %>
