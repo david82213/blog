@@ -21,6 +21,25 @@ h1{
   text-align: center;
 }
 
-h3{
+#post_div{
+  margin: 1em;
+}
 
+#comment_div{
+  margin: 1em;
+}
+
+#post_div h2{
+  margin-left: 1em;
+}
+
+.left {
+    width: 20%;
+    float: left;
+    text-align: left;
+}
+.right {
+    width: 75%;
+    margin-left: 20px;
+    float:left;
 }

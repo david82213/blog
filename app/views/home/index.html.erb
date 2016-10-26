@@ -1,9 +1,24 @@
 <h1>Welcome to my blog</h1>
 <h3>Here is the trending blog posts:</h3>
 
-<!-- <div id="trending_posts">
-  <%# @posts.each do |p| %>
-    <%#= link_to p.title, title_path(p) %>
-    <hr>
-  <%# end %>
-</div> -->
+<div id="trending_posts">
+  <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Updated Time</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @posts.each do |p| %>
+          <tr>
+            <td><%= link_to p.title, post_path(p) %></td>
+            <td><%= truncate(p.description, length: 10) %></td>
+            <td><%= p.updated_at %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+</div>
