@@ -55,7 +55,7 @@
       </thead>
 
       <tbody>
-        <% @post.comments.each do |comment| %>
+        <% @post.comments.order(created_at: :desc).each do |comment| %>
           <tr>
             <td><%= 'Author name' %></td>
             <td><%= comment.description %></td>

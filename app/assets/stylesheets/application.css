@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+.jumbotron {
+ background: url("bg_2.jpg") no-repeat center center;
+ background-size: cover;
+ padding-bottom: 10em;
+}
+
+.navbar-default{
+  background: rgba(0,0,0,0.1);
+}

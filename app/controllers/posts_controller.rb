@@ -20,7 +20,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.order(created_at: :desc)
+    @posts = Post.order(created_at: :desc).paginate(:page => params[:page], :per_page => 10)
   end
 
   def destroy

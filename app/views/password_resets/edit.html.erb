@@ -1,0 +1,18 @@
+<h1>Edit Password</h1>
+
+<%= form_for @user, url: password_reset_path(@user), html:{method: :path} do |f| %>
+
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
